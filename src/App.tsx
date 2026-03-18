@@ -403,13 +403,13 @@ function SocialButtons() {
 function TopNav() {
   return (
     <header className="sticky top-0 z-40 border-b border-emerald-100 bg-slate-50/95 backdrop-blur">
-      <div className="mx-auto max-w-6xl px-6 py-4">
-        <nav className="hidden items-center justify-center gap-7 md:flex">
+      <div className="mx-auto max-w-6xl px-6 py-6">
+        <nav className="hidden items-center justify-center gap-10 md:flex lg:gap-12">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-semibold text-emerald-900 transition hover:text-emerald-700"
+              className="text-[1.05rem] font-semibold text-emerald-900 transition hover:text-emerald-700"
             >
               {item.label}
             </a>
