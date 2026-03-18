@@ -484,26 +484,28 @@ function ResearchList() {
 
 function ProjectGrid() {
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="grid gap-6 md:grid-cols-2 md:auto-rows-fr md:items-stretch">
       {projects.map((project) => (
         <Card
           key={project.title}
-          className="flex h-full flex-col rounded-3xl border-emerald-100 bg-white shadow-sm"
+          className="flex h-full flex-col overflow-hidden rounded-3xl border-emerald-100 bg-white shadow-sm"
         >
-          <CardHeader className="px-8 pt-8 pb-4">
+          <CardHeader className="px-8 pt-8 pb-3">
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0 flex-1">
-                <CardTitle className="text-xl font-semibold leading-tight text-emerald-900">
+                <CardTitle className="min-h-[2.8rem] text-[1.15rem] font-semibold leading-[1.22] tracking-tight text-emerald-900 whitespace-nowrap">
                   {project.title}
                 </CardTitle>
-                <div className="mt-2 text-sm text-slate-500">{project.period}</div>
+                <div className="mt-1 min-h-[1.4rem] text-sm text-slate-500">{project.period}</div>
               </div>
               <AssetIconButton href={project.assetHref} label={project.assetLabel || "Open project material"} />
             </div>
           </CardHeader>
-          <CardContent className="flex flex-1 flex-col px-8 pb-8">
-            <p className="text-[15px] leading-8 text-slate-600 [text-align:justify]">{project.summary}</p>
-            <div className="mt-6 flex flex-wrap gap-3">
+          <CardContent className="flex flex-1 flex-col px-8 pb-8 pt-0">
+            <div className="min-h-[12.2rem] pt-1">
+              <p className="text-[15px] leading-7 text-slate-600 [text-align:justify]">{project.summary}</p>
+            </div>
+            <div className="mt-4 flex flex-wrap content-start gap-2.5">
               {project.highlights.map((highlight) => (
                 <Badge
                   key={highlight}
