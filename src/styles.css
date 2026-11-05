@@ -314,14 +314,11 @@ html{scroll-behavior:smooth}body{margin:0;background:#fff}a,summary{-webkit-tap-
 #site .hs-contact-links {gap:8px 24px;margin-top:24px}
 #site .hs-contact-links a {gap:8px;min-height:40px}
 #site .hs-primary-link {gap:8px;padding:8px 12px;min-height:40px}
-#site .hs-intro {padding:0}
+#site .hs-intro {padding:0;--hs-paragraph-gap:12px}
 #site .hs-intro p+p {margin-top:var(--hs-paragraph-gap)}
 /* Enlarge the introduction without stretching the space between paragraphs. */
 @container (min-width:951px) {
   #site .hs-intro {--hs-type-body:var(--hs-type-subheading);--hs-leading-body:1.5}
-}
-@container (min-width:1200px) {
-  #site .hs-intro {--hs-type-body:19px}
 }
 #site .hs-trajectory {padding:0 var(--hs-gutter)}
 #site .hs-section-heading {gap:16px;align-items:baseline;flex-wrap:wrap}

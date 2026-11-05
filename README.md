@@ -33,7 +33,7 @@ GitHub Desktop의 기존 `hanyiseok.github.io-clone` 저장소에서 변경 내�
 
 ## 문서 관리
 
-`docs/pdf-sources.json`에 게시 PDF의 원본 파일명, SHA256, 페이지 수를 기록했습니다. 10월 31일 CV, HFMC·NTU 보고서, 포트폴리오 8개를 Word에서 PDF로 export하고 총 59페이지를 검수했습니다. Anyang Stream은 상세본, SAF는 Refined를 사용했습니다. Word 원본을 수정하지 않았습니다.
+`docs/pdf-sources.json`에 게시 PDF의 원본 파일명, SHA256, 페이지 수를 기록했습니다. 2026년 11월 5일 CV와 Portfolios 폴더의 최신 PDF 8개를 원본과 SHA256으로 대조했습니다. 기존 HFMC·NTU 보고서를 포함해 공개 PDF는 11개, 총 59페이지입니다. Anyang Stream은 상세 3쪽본, SAF는 Refined를 사용합니다. Anyang 1쪽 요약본·과거 버전·작업용 자료는 별도로 공개하지 않습니다. 제공받은 PDF의 내용과 링크는 그대로 유지하며 게시용 파일명만 통일합니다.
 
 기존 성적표 2개와 FeEDDHA 자료를 공개 폴더에서 제거했습니다. 구형 보고서·발표자료·포스터·사진도 최신 구성에서 사용하지 않아 공개 폴더에서 정리했으며, 기존 소스와 자료는 작성자의 비공개 로컬 작업 폴더에 별도 보관했습니다. Git 과거 이력은 재작성하지 않았습니다. 최신 CV의 전체 발표 이력은 원본대로 유지합니다.
 

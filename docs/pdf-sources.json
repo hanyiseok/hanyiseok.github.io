@@ -8,7 +8,8 @@
       "source_sha256": "5f14abb9a5b9f74425116fd4cab5d165f181e255b6b10994650b42c7cd01e0dd",
       "pdf": "Hanyi_Seok_CV.pdf",
       "pdf_sha256": "0a5bb1d2a9ec691c0fa07cf1b12142ce09081680703568d2887106961d96e323",
-      "pages": 3
+      "pages": 3,
+      "source_pdf": "Hanyi_Seok_CV_20261105.pdf"
     },
     {
       "source": "HFMC 2D Model.docx",
@@ -29,56 +30,65 @@
       "source_sha256": "9538b0fcbebf99ba1995a0818283c6d7e296e735448b6af3f69fcbdfa4f643a7",
       "pdf": "arww-project-brief.pdf",
       "pdf_sha256": "1f5ad07ed5a1262d29f988d869de04070f203b12a198434049248791195a26dd",
-      "pages": 2
+      "pages": 2,
+      "source_pdf": "UOS_Project_Description_Hanyi_Seok.pdf"
     },
     {
       "source": "NEU_Project_Description_Hanyi_Seok.docx",
       "source_sha256": "5bcaa50627aa371f3cc72c742aa083eaf1d58c2fb61092402f419b799d13ee3c",
       "pdf": "neu-project-brief.pdf",
       "pdf_sha256": "8d32d3b64063768e91d013072ecf1d8b98a0ae173192164d72d64afcfbf48a59",
-      "pages": 2
+      "pages": 2,
+      "source_pdf": "NEU_Project_Description_Hanyi_Seok.pdf"
     },
     {
       "source": "Rutgers_Bismuth_Project_Description_Hanyi_Seok.docx",
       "source_sha256": "1a36fc7e8f1a5d4a64b71464910aa1783a1c69201c4b23909c03c424d5256d17",
       "pdf": "rutgers-project-brief.pdf",
       "pdf_sha256": "5da3ce1c468f812eba2c74b3eb0384e62bd74b01c2d20a2038256580df8c18d1",
-      "pages": 2
+      "pages": 2,
+      "source_pdf": "Rutgers_Bismuth_Project_Description_Hanyi_Seok.pdf"
     },
     {
       "source": "KENTECH_Project_Description_Hanyi Seok.docx",
       "source_sha256": "ea501a4f4e9c5b499cddeb96ab2d172912085ffe9729a77b814c3c98d6c87118",
       "pdf": "kentech-project-brief.pdf",
       "pdf_sha256": "194713c5c8276400692e4d5b3980fc826ce9ca56be10099301ef5d03bebbb2f3",
-      "pages": 2
+      "pages": 2,
+      "source_pdf": "KENTECH_Project_Description_Hanyi Seok.pdf"
     },
     {
       "source": "ToxCast_ToxRef_Project_Description_Hanyi_Seok.docx",
       "source_sha256": "c151e0ca620bce9f22b3d747339a068322e9162b12af0e771fbde4e9aa2f612c",
       "pdf": "toxcast-project-brief.pdf",
       "pdf_sha256": "6a109c584b28389b91f8626b266ad06076d56b23f3cd9a678e673c7c7b890f50",
-      "pages": 2
+      "pages": 2,
+      "source_pdf": "ToxCast_ToxRef_Project_Description_Hanyi_Seok.pdf"
     },
     {
       "source": "Anyang_Stream_DO_Project_Description_Hanyi_Seok_20261031.docx",
       "source_sha256": "24c7664b2c37a846409e75014c087e89094cc904d1674514434c526734f3821c",
       "pdf": "anyang-stream-project-brief.pdf",
       "pdf_sha256": "8b2c74327fdd74b884096d9686c1ad2b76e787e531cbc03cb6699ee5f58f9dd5",
-      "pages": 3
+      "pages": 3,
+      "source_pdf": "Anyang_Stream_DO_Project_Description_Hanyi_Seok_20261031.pdf"
     },
     {
       "source": "SAF_Project_Description_Hanyi_Seok_20261031_Refined.docx",
       "source_sha256": "ee0df069b839c22c60dd768f67be5eb82438eaa889a1b880a62eac356aeacbbd",
       "pdf": "saf-project-brief.pdf",
       "pdf_sha256": "ebcc5cc124cdf6228f09edd4ee92c3db3f30862e61b13e734d96d2ccb30113c7",
-      "pages": 1
+      "pages": 1,
+      "source_pdf": "SAF_Project_Description_Hanyi_Seok_20261031_Refined.pdf"
     },
     {
       "source": "Campus_Carbon_Neutrality_Project_Description_Hanyi_Seok_20261031.docx",
       "source_sha256": "9a3e2128fb2dac927a4f6a7b07690aec5416790d9ef68b179238eb531de16551",
       "pdf": "campus-project-brief.pdf",
       "pdf_sha256": "3f4ba8d7bb934be1f00922e1863f854296d6afefcd38173ce318fa3c22e5f947",
-      "pages": 1
+      "pages": 1,
+      "source_pdf": "Campus_Carbon_Neutrality_Project_Description_Hanyi_Seok_20261031.pdf"
     }
-  ]
+  ],
+  "verified_date": "2026-11-05"
 }
