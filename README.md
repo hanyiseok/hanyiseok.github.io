@@ -1,81 +1,50 @@
-# Hanyi Seok · Research Portfolio
+# Hanyi Seok — Research website
 
-개인 연구·프로젝트·학력과 CV를 소개하는 홈페이지입니다.
+Live: https://hanyiseok.github.io/
 
-- **홈페이지:** https://hanyiseok.github.io/
-- **원본 저장소:** https://github.com/hanyiseok/hanyiseok.github.io
-- **구성:** React, TypeScript, Vite, Tailwind CSS
-- **공개 방식:** `main`에 Push하면 GitHub Actions가 사이트를 빌드하고 GitHub Pages에 배포합니다.
+2026년 11월 5일 확정한 9차 시안을 반영한 연구 홈페이지입니다. Home, Research, About, 연구 상세 6개, 수업 프로젝트 상세 3개를 각각 독립된 정적 HTML로 제공합니다. JavaScript 없이도 본문·메뉴·자료 링크를 이용할 수 있습니다.
 
-이 문서는 홈페이지를 수정하는 본인을 위한 메모입니다. 공개 GitHub 저장소에서는 읽을 수 있지만, 현재 설정에서는 홈페이지의 메뉴나 별도 안내 페이지로 게시되지 않습니다.
+## 수정할 파일
 
-## 어디를 수정하나요?
+| 목적 | 파일 |
+|---|---|
+| 연구 제목·기간·방법, 보조 프로젝트 본문 | `src/content/projects.mjs` |
+| Home·Research·About·HFMC·ARWW·NEU 본문 | `src/content/templates.html` |
+| 공통 헤더·푸터 | `src/content/layout.html` |
+| 페이지 주소·자료 파일 대응 | `src/content/routes.mjs` |
+| 글자·여백·반응형 디자인 | `src/styles.css` |
+| 공개할 PDF | `public/files/` |
 
-| 바꾸려는 내용 | 파일 또는 위치 |
-| --- | --- |
-| 소개 글, 연구 경험, 프로젝트, 학력, 기술 | `src/App.tsx` |
-| CV·성적표·연구 자료 | `public/files/` |
-| 프로필 사진·연구 이미지 | `public/images/` |
-| 홈페이지 전체 스타일·폰트 | `src/index.css` |
-| 브라우저 탭 아이콘 | `public/favicon.svg` |
-| 브라우저 탭 제목·Google Analytics 설정 | `index.html` |
-| 자동 빌드·배포 절차 | `.github/workflows/deploy.yml` |
+반복되는 연구 제목·기간·방법은 `projects.mjs`가 최종 기준입니다. `scripts/refine-page.mjs`가 목록과 상세의 표기를 통일하고, `scripts/generate.mjs`가 실제 링크·아이콘·페이지 메타데이터를 생성합니다. `.generated/`와 `dist/`는 생성물이므로 직접 수정하거나 커밋하지 않습니다.
 
-`src/App.tsx` 안에서 `researchItems`, `projects`, `presentations`, `honors`, `technicalSkills`를 검색하면 관련 목록을 찾을 수 있습니다. 파일 주소는 `assetPaths`에 모여 있고, 소개 문구 일부는 아래쪽 화면 구성 코드에 있습니다.
+## 로컬 확인과 게시
 
-### CV와 첨부 자료 교체
-
-같은 이름으로 파일을 교체하면 기존 링크를 유지할 수 있습니다. 예를 들어 CV는 `public/files/Hanyi_Seok_CV.pdf`, 프로필 사진은 `public/images/profile-square.jpg`입니다.
-
-파일 이름을 바꿀 때는 `src/App.tsx`의 해당 `assetPaths` 값도 함께 바꿉니다. `public/files/example.pdf`의 홈페이지 주소는 `/files/example.pdf`이며, 주소에 `public`을 넣지 않습니다.
-
-## PC에서 수정하고 확인하기
-
-GitHub Desktop에서 `hanyiseok.github.io` 저장소를 선택한 뒤 **Repository → Show in Explorer**로 작업 폴더를 엽니다. 터미널 명령은 `package.json`이 있는 이 폴더에서 실행합니다. Node.js는 22.12 이상인 LTS 버전을 사용합니다.
-
-처음 내려받았거나 의존성 파일이 바뀌었을 때 설치합니다.
+Node 22.12 이상(또는 현재 LTS)을 사용합니다.
 
 ```sh
 npm ci
+npm run check
+npm run preview
 ```
 
-수정 중에는 아래 명령을 실행하고, 터미널에 표시되는 로컬 주소를 브라우저에서 엽니다. 종료는 터미널에서 `Ctrl+C`입니다.
+미리보기 주소는 터미널에 표시됩니다. 원고나 CSS를 고친 뒤에는 `npm run check`를 다시 실행하고 브라우저를 새로고침합니다. `npm run dev`도 사용할 수 있으며, 원고 변경 후에는 종료하고 다시 실행해 페이지를 재생성합니다.
 
-```sh
-npm run dev
-```
+GitHub Desktop의 기존 `hanyiseok.github.io-clone` 저장소에서 변경 내용을 검토하고 Commit → Push origin을 누르면 됩니다. `main`에 push할 때 GitHub Actions가 설치·빌드·테스트 후 `dist/`만 GitHub Pages에 배포합니다. Actions의 `Deploy static content to Pages`가 성공했는지 확인합니다. 별도의 새 저장소나 업로드용 폴더는 필요 없습니다.
 
-공개하기 전에는 코드 검사와 배포용 빌드를 확인합니다.
+## 문서 관리
 
-```sh
-npm run lint
-npm run build
-```
+`docs/pdf-sources.json`에 게시 PDF의 원본 파일명, SHA256, 페이지 수를 기록했습니다. 10월 31일 CV, HFMC·NTU 보고서, 포트폴리오 8개를 Word에서 PDF로 export하고 총 59페이지를 검수했습니다. Anyang Stream은 상세본, SAF는 Refined를 사용했습니다. Word 원본을 수정하지 않았습니다.
 
-만들어진 배포용 결과를 PC에서 보고 싶으면 `npm run preview`를 실행합니다.
+기존 성적표 2개와 FeEDDHA 자료를 공개 폴더에서 제거했습니다. 구형 보고서·발표자료·포스터·사진도 최신 구성에서 사용하지 않아 공개 폴더에서 정리했으며, 기존 소스와 자료는 작성자의 비공개 로컬 작업 폴더에 별도 보관했습니다. Git 과거 이력은 재작성하지 않았습니다. 최신 CV의 전체 발표 이력은 원본대로 유지합니다.
 
-## 홈페이지에 반영하기
+PDF를 교체할 때는 파일명과 링크를 함께 확인합니다. CV 주소는 `/files/Hanyi_Seok_CV.pdf`를 유지하고 보고서는 `*-report.pdf` 또는 `*-project-brief.pdf` 형식을 사용합니다. PDF의 버튼이 아니라 실제 `<a href>`로 연결되어 있습니다.
 
-1. GitHub Desktop에서 **Fetch origin**을 눌러 원격 변경을 확인합니다. **Pull origin**이 나타나면 작업 시작 전에 받아옵니다.
-2. 파일을 수정하고 로컬 미리보기와 위의 검사를 확인합니다.
-3. **Changes**에서 이번에 반영할 파일을 확인합니다.
-4. 변경 내용을 설명하는 Summary를 적고 **Commit to main**을 누릅니다. 예: `Update CV and research experience`.
-5. **Push origin**을 눌러 GitHub로 보냅니다.
-6. [Actions](https://github.com/hanyiseok/hanyiseok.github.io/actions)에서 **Deploy static content to Pages**의 최신 실행이 성공했는지 확인한 뒤 홈페이지를 새로고침합니다.
+## 방문 분석
 
-**저장**은 PC 파일을 바꾸고, **Commit**은 변경 이력을 기록하며, **Push**는 그 기록을 GitHub로 보냅니다. 홈페이지 갱신은 Push 이후 배포가 성공해야 완료됩니다.
+기존 GA4 `G-WJD6VVZCP8`을 유지합니다. 공개 도메인에서만 태그를 실행하므로 localhost 미리보기는 통계에 들어가지 않습니다. 별도 알림이나 세션 녹화는 없습니다.
 
-### 반영되지 않거나 배포가 실패할 때
+GA4 확장 측정의 `page_view`와 `file_download`를 이용합니다. GA4 관리 화면에 `research_detail_view`, `cv_click`, `report_click` 파생 이벤트를 설정했으므로 같은 이벤트를 코드에서 추가 전송하지 않습니다. PDF 클릭은 문서의 실제 완독 여부를 의미하지 않습니다. GA4 수집은 브라우저 차단 설정의 영향을 받을 수 있습니다.
 
-- Desktop에 **Push origin**이 남아 있는지 확인합니다.
-- Actions에서 최신 실행을 열어 실패한 단계의 오류를 확인합니다. PC에서 `npm run build`를 실행하면 빌드 오류를 먼저 확인할 수 있습니다.
-- 배포가 성공했는데 이전 화면이나 아이콘이 보이면 강력 새로고침(`Ctrl+Shift+R`) 또는 새 비공개 창에서 확인합니다. 탭 아이콘은 브라우저에 더 오래 캐시될 수 있습니다.
-- 파일 이름·대소문자와 링크가 일치하는지 확인합니다.
+새 상세 경로는 `/research/{slug}/` 또는 `/projects/{slug}/`를 사용합니다. 각 경로에 실제 `index.html`, 고유 제목·설명·canonical이 있으며 `sitemap.xml`에도 포함합니다. 없는 페이지는 `404.html`로 안내합니다.
 
-## 방문 통계와 이전 버전
-
-Google Analytics 코드는 `index.html`에 있습니다. 방문 통계는 해당 홈페이지를 연결해둔 Google Analytics 계정에서 확인합니다.
-
-이전 버전은 GitHub Desktop의 **History** 또는 [GitHub 커밋 기록](https://github.com/hanyiseok/hanyiseok.github.io/commits/main/)에서 확인합니다. `src` 안에 `App_old.tsx` 같은 백업을 추가하면 사용하지 않아도 TypeScript 검사에 포함됩니다. 변경 이력을 활용하고, 아직 기록하지 않은 별도 백업이 필요하면 작업 소스 밖에 보관합니다.
-
-`node_modules/`는 설치된 라이브러리, `dist/`는 자동으로 만들어지는 배포 결과입니다. 직접 편집하거나 GitHub에 올릴 필요가 없으며, 둘 다 `.gitignore`로 제외되어 있습니다. 라이브러리를 추가하거나 제거할 때는 `package.json`과 `package-lock.json`을 함께 커밋합니다.
+Geist 글꼴은 자체 호스팅하며 라이선스는 `public/fonts/OFL.txt`에 있습니다.
