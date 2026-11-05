@@ -390,6 +390,8 @@ html{scroll-behavior:smooth}body{margin:0;background:#fff}a,summary{-webkit-tap-
 #site .hs-prose .hs-section-counter {margin:0 0 8px}
 #site .hs-prose h2 {margin:0}
 #site .hs-prose p {margin-top:var(--hs-paragraph-gap)}
+#site .hs-prose a.hs-inline-citation {color:var(--hs-accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
+#site .hs-prose a.hs-inline-citation:hover {text-decoration-thickness:2px}
 #site .hs-result {margin:24px 0;padding:0 0 0 16px}
 #site .hs-result>p {margin-top:8px}
 #site .hs-prose .hs-resources {margin-bottom:0;padding-top:32px}
