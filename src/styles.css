@@ -316,6 +316,14 @@ html{scroll-behavior:smooth}body{margin:0;background:#fff}a,summary{-webkit-tap-
 #site .hs-primary-link {gap:8px;padding:8px 12px;min-height:40px}
 #site .hs-intro {padding:0}
 #site .hs-intro p+p {margin-top:var(--hs-paragraph-gap)}
+/* Give the desktop introduction comparable weight to the identity block. */
+@container (min-width:951px) {
+  /* The contact row below the identity uses 24px spacing + a 40px link height. */
+  #site .hs-intro {--hs-type-body:var(--hs-type-subheading);--hs-leading-body:1.6;display:flex;flex-direction:column;justify-content:space-between;align-self:stretch;margin-bottom:64px}
+}
+@container (min-width:1200px) {
+  #site .hs-intro {--hs-leading-body:var(--hs-leading-reading)}
+}
 #site .hs-trajectory {padding:0 var(--hs-gutter)}
 #site .hs-section-heading {gap:16px;align-items:baseline;flex-wrap:wrap}
 #site .hs-trajectory .hs-trajectory-intro {margin:8px 0 24px}
