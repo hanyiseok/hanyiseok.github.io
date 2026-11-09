@@ -1,15 +1,16 @@
 {
   "export_date": "2026-11-05",
-  "method": "Microsoft Word PDF exports; CV and KENTECH revised 2026-11-05; remaining project briefs synchronized with current portfolio PDFs",
+  "method": "Microsoft Word PDF exports; latest supplied CV PDF synchronized 2026-11-09; reports and project briefs retained",
   "sources_unchanged": true,
   "documents": [
     {
-      "source": "Hanyi_Seok_CV_20261105.docx",
-      "source_sha256": "9b788a0d359e5eabd50a03aef1b2a8e6a0aae48771f576ae4069235551aa7ec4",
+      "source": "Hanyi_Seok_CV.pdf",
+      "source_sha256": "62f3bd63560673f49a775bd47b31a19ec968b95ba45c8a5fb0db280ca91a4959",
       "pdf": "Hanyi_Seok_CV.pdf",
-      "pdf_sha256": "0e6f3917c208556f36bdd9a103c32fb8b6e1f2d20b9b62c7023474b16385ae1a",
+      "pdf_sha256": "62f3bd63560673f49a775bd47b31a19ec968b95ba45c8a5fb0db280ca91a4959",
       "pages": 3,
-      "source_pdf": "Hanyi_Seok_CV_20261105.pdf"
+      "source_pdf": "Hanyi_Seok_CV.pdf",
+      "updated_date": "2026-11-09"
     },
     {
       "source": "HFMC 2D Model.docx",
@@ -90,5 +91,5 @@
       "source_pdf": "Campus_Carbon_Neutrality_Project_Description_Hanyi_Seok_20261031.pdf"
     }
   ],
-  "verified_date": "2026-11-05"
+  "verified_date": "2026-11-09"
 }
